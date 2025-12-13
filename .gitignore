@@ -1,0 +1,27 @@
+# STM32CubeIDE specific
+.project
+.cproject
+.settings/
+.mxproject
+*.launch
+*.ioc
+Drivers/
+Middlewares/
+USB_HOST/
+USB_DEVICE/
+/STM32CubeIDE/
+
+# Build artifacts
+Debug/
+Release/
+*.elf
+*.bin
+*.hex
+*.map
+*.o
+*.d
+*.su
+
+# OS specific
+.DS_Store
+Thumbs.db
