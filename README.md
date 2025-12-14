@@ -1,4 +1,4 @@
-![STM32 Learning Hub Banner](assets/banner.png)
+![STM32 Learning Hub Banner](assets/banner_v2.png)
 
 <div align="center">
 
