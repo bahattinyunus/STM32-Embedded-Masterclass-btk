@@ -1,15 +1,67 @@
-# Katkı Sağlama Rehberi (Contributing)
+# 🤝 Katkıda Bulunma Rehberi
 
-Bu projeye katkıda bulunmak isterseniz, aşağıdaki adımları izleyebilirsiniz.
+Öncelikle bu projeye katkıda bulunmak istediğiniz için teşekkür ederiz! Açık kaynak topluluğunun gücü, sizin gibi geliştiricilerin katkılarıyla ortaya çıkar.
 
-1.  **Fork** edin: Bu projeyi kendi GitHub hesabınıza çatallayın.
-2.  **Clone** yapın: Kendi bilgisayarınıza indirin.
-3.  **Branch** açın: Yeni bir özellik veya düzeltme için yeni bir dal oluşturun (`git checkout -b yeni-ozellik`).
-4.  **Commit** yapın: Değişikliklerinizi kaydedin (`git commit -m 'Yeni özellik: UART Modülü eklendi'`).
-5.  **Push** yapın: Değişiklikleri GitHub'a gönderin (`git push origin yeni-ozellik`).
-6.  **Pull Request (PR)** açın: Ana depoya birleştirme isteği gönderin.
+Aşağıdaki adımları takip ederek projeye değer katabilir, hataları düzeltebilir veya yeni özellikler ekleyebilirsiniz.
 
-## Kod Standartları
-- Kodunuzda yorum satırları kullanmaya özen gösterin (Tercihen Türkçe).
-- HAL kütüphanesi standartlarına uyun.
-- Test edilmemiş kodu göndermeyin.
+## 🚀 Nasıl Katkıda Bulunabilirim?
+
+### 1. Projeyi Forklayın
+Sağ üst köşedeki "Fork" butonuna tıklayarak projeyi kendi GitHub hesabınıza kopyalayın.
+
+### 2. Klonlayın
+Forkladığınız projeyi yerel bilgisayarınıza indirin:
+
+```bash
+git clone https://github.com/KULLANICI_ADINIZ/stm_learning.git
+cd stm_learning
+```
+
+### 3. Yeni Bir Dal (Branch) Oluşturun
+Her özellik veya düzeltme için temiz bir dal oluşturmak en iyi uygulamadır:
+
+```bash
+git checkout -b feature/yeni-ozellik
+# veya hata düzeltmesi için
+git checkout -b fix/hata-duzeltmesi
+```
+
+### 4. Değişikliklerinizi Yapın
+Kodunuzu yazın, test edin ve projenin genel yapısını bozmadığından emin olun.
+
+### 5. Commit Kuralları
+Commit mesajlarınızın net ve açıklayıcı olmasına özen gösterin. Mümkünse aşağıdaki formatı kullanın:
+
+*   `feat: Yeni I2C sürücüsü eklendi`
+*   `fix: UART baud rate hesaplama hatası giderildi`
+*   `docs: README dosyası güncellendi`
+*   `style: Kod formatlaması düzenlendi`
+
+```bash
+git add .
+git commit -m "feat: DS3231 için alarm fonksiyonu eklendi"
+```
+
+### 6. Gönderin (Push)
+Değişiklikleri kendi forkladığınız depoya gönderin:
+
+```bash
+git push origin feature/yeni-ozellik
+```
+
+### 7. Pull Request (PR) Oluşturun
+GitHub sayfasında "Compare & pull request" butonunu göreceksiniz. Yaptığınız değişiklikleri açıklayan bir özet yazarak PR oluşturun.
+
+---
+
+## 📝 Kod Yazım Standartları
+
+*   **Dil:** Kod yorum satırları ve dokümantasyon için **Türkçe** tercih edilmektedir.
+*   **Stil:** STM32 HAL (Hardware Abstraction Layer) adlandırma kurallarına sadık kalın.
+*   **Temizlik:** Gereksiz boşlukları ve kullanılmayan değişkenleri temizleyin.
+
+## 🐛 Hata Bildirimi (Issues)
+
+Eğer bir hata bulursanız veya bir öneriniz varsa, lütfen [Issues](https://github.com/bahattinyunus/stm_learning/issues) sekmesinden yeni bir konu açın.
+
+Teşekkürler ve iyi kodlamalar! 🚀

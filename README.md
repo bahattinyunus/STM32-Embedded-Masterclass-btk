@@ -1,79 +1,136 @@
-![STM32 Learning Hub Banner](assets/banner_v2.png)
+![STM32 Embedded Systems Banner](assets/stm32_banner_new.png)
 
 <div align="center">
 
-# STM32 İleri Seviye Öğrenme Merkezi
-### STM32VLDISCOVERY (MB913) Geliştirme Platformu
+# STM32 ile Gömülü Yazılım Geliştirme
+### Profesyonel Gömülü Sistemler ve ARM Mimarisi Eğitimi
 
-[![License](https://img.shields.io/badge/lisans-MIT-blue?style=for-the-badge&logo=github)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-STM32-green?style=for-the-badge&logo=stmicroelectronics)](https://www.st.com)
-[![Status](https://img.shields.io/badge/durum-aktif-success?style=for-the-badge)](https://github.com/)
-[![Language](https://img.shields.io/badge/dil-C-blue?style=for-the-badge&logo=c)](Core/Src/main.c)
-
-*STM32 dünyasına profesyonel bir adım atın. Bu repo, gömülü sistemler geliştirme, donanım kontrolü ve MCU mimarisi üzerine kapsamlı bir kaynak sunar.*
-
-[Projeler](#-proje-kataloğu) • [Donanım](#-donanım-özeti) • [Başlangıç](#-hızlı-başlangıç) • [Katkıda Bulun](#-katkıda-bulunma)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-STM32-03234B.svg)](https://www.st.com/en/microcontrollers-microprocessors/stm32f407vg.html)
+[![Language](https://img.shields.io/badge/language-C-A8B9CC.svg)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Status](https://img.shields.io/badge/status-Active-success.svg)]()
 
 </div>
 
 ---
 
-## 🎯 Proje Amacı
+## 🎓 Eğitim Hakkında
 
-Bu depo, **STM32F100RBT6** mikrodenetleyicisi üzerinde derinlemesine uzmanlaşmak isteyenler için tasarlanmıştır. Her proje, sadece kodu değil, altında yatan donanım prensibini de öğretmeyi hedefler. Basit GPIO işlemlerinden karmaşık çevresel birim (Peripheral) kontrollerine kadar geniş bir yelpaze sunar.
+Bu depo, **BTK Akademi** bünyesinde **Muhammed Fatih KÖSEOĞLU** tarafından verilen **STM32 ile Gömülü Yazılım Geliştirme** eğitiminin uygulama notlarını, kaynak kodlarını ve proje örneklerini içermektedir.
 
-## 📚 Proje Kataloğu
+> **Eğitim Kodu:** 258  
+> **Eğitmen:** Muhammed Fatih KÖSEOĞLU  
+> **Eğitim Linki:** [BTK Akademi - STM32 ile Gömülü Yazılım Geliştirme](https://www.btkakademi.gov.tr/portal/course/stm32-ile-gomulu-yazilim-gelistirme-35649?t=DOC)
 
-Aşağıdaki projeler, basitten karmaşığa doğru sıralanmıştır. Her biri kendi içinde detaylı açıklamalara sahiptir.
+### 🎯 Eğitimin Amacı
+Bu dersin amacı, gömülü yazılım mühendisliği hakkında bilgi edinmek, **ARM mimarili mikrodenetleyicileri** tanımak ve bu mikrodenetleyiciler üzerinde yazılım geliştirerek gömülü yazılım mühendisliği alanında bilgi ve beceri kazanımlarını sağlamaktır.
 
-| ID | Proje İsmi | Kategori | Açıklama |
-|:--:|:---|:---|:---|
-| **01** | [**Blinky (PC9)**](projects/01_Blinky_PC9) | `GPIO` | Temel "Hello World". PC9 pinindeki yeşil LED'i yakıp söndürür. |
-| **02** | [**Buton Kontrolü**](projects/02_Button_Control) | `GPIO` | PA0 butonunu okuyarak LED durumunu değiştirir. Input/Output mantığı. |
-| **03** | [**Timer Interrupt**](projects/03_Timer_Blink) | `TIM` | Donanım zamanlayıcıları (TIM2) ile hassas zamanlama ve kesme (interrupt) yönetimi. |
-| **04** | [**PWM Breathing**](projects/04_PWM_Breathing) | `PWM` | LED parlaklığını Pulse Width Modulation ile nefes alma efekti şeklinde kontrol eder. |
-| **05** | [**Dahili Sıcaklık (ADC)**](projects/05_ADC_InternalTemp) | `ADC` | MCU'nun dahili sıcaklık sensörünü okuyarak dijital veriye dönüştürür. |
-| **06** | [**UART İletişimi**](projects/06_UART_Tx) | `COMM` | Bilgisayar ile seri haberleşme (Printf ile debugging). |
+---
 
-## 🛠 Donanım Özeti
+## � Neler Öğreneceksiniz?
 
-**Kart:** STM32VLDISCOVERY (MB913)
-**MCU:** STM32F100RBT6 (Cortex-M3 @ 24MHz)
+Bu eğitim seti ile aşağıdaki konularda uzmanlaşacaksınız:
 
-| Bileşen | Pin | Not |
-|:---|:---:|:---|
-| **Yeşil LED** | `PC9` | Aktif Yüksek |
-| **Mavi LED** | `PC8` | Aktif Yüksek |
-| **User Buton** | `PA0` | Floating Input |
-| **ST-LINK** | `SWD` | Dahili Debugger |
+*   🏛️ **ARM Cortex-M4 Mimarisi:** İşlemci çekirdeği, hafıza haritası ve bus yapısı.
+*   ⏱️ **Clock & RCC:** Sistem saati yapılandırması ve güç yönetimi.
+*   🔌 **GPIO Yönetimi:** Dijital giriş/çıkış işlemleri ve harici kesmeler (EXTI).
+*   📊 **Analog Sinyaller:** ADC birimi ile sensör okuma ve voltaj hesaplamaları.
+*   ⏲️ **Zamanlayıcılar (Timers):** PWM üretimi, input capture ve zamanlama kesmeleri.
+*   📡 **Haberleşme Protokolleri:** UART, I2C ve SPI ile modüler haberleşme.
+*   ⚡ **DMA (Direct Memory Access):** İşlemciyi yormadan veri transferi.
 
-> 🔍 Detaylı pin diyagramları ve şemalar için [**Donanım Kılavuzu**](docs/hardware_guide.md) sayfasını ziyaret edin.
+## 🗺️ Öğrenme Yol Haritası (Roadmap)
 
-## 🚀 Hızlı Başlangıç
+Aşağıdaki diyagram, bu eğitim serisindeki konuların birbirleriyle olan ilişkisini ve önerilen öğrenme sırasını göstermektedir:
 
-Bu depoyu kullanarak geliştirmeye başlamak için:
+```mermaid
+graph TD
+    A[Baslangic] --> B(01-GPIO_Blinky);
+    B --> C(02-External_Interrupts);
+    B --> D(03-ADC_Voltage_Calculation);
+    C --> E{Zamanlama & Iletisim};
+    E --> F(04-Timer_PWM);
+    E --> G(05-UART_Communication);
+    F --> H(06-I2C_DS3231_RTC);
+    G --> I(07-SPI_LIS3DSH_Accelerometer);
+    H --> J(08-DMA_Memory_Management);
+    I --> J;
+    J --> K[Uzmanlasma];
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style K fill:#bbf,stroke:#333,stroke-width:2px
+    style B fill:#dfd
+    style C fill:#dfd
+    style D fill:#dfd
+    style F fill:#ffd
+    style G fill:#ffd
+    style H fill:#dff
+    style I fill:#dff
+    style J fill:#fdd
+```
 
-1.  **Repoyu Klonlayın**:
-    ```bash
-    git clone https://github.com/KULLANICI_ADINIZ/stm_learning.git
-    cd stm_learning
-    ```
-2.  **STM32CubeIDE'yi Başlatın**:
-    *   `File > Import > General > Existing Projects into Workspace` yolunu izleyin.
-    *   `projects/` klasörünü seçin ve ilgilendiğiniz projeyi iş alanınıza dahil edin.
-3.  **Derle ve Yükle**:
-    *   Kartınızı USB ile bağlayın.
-    *   Debug butonuna (böcek simgesi) basarak kodu yükleyin.
+---
+
+## 🛠 Donanım Gereksinimleri
+
+Proje örneklerini uygulayabilmek için aşağıdaki donanımlara ihtiyacınız olacaktır:
+
+| Donanım | Açıklama |
+| :--- | :--- |
+| **STM32F407G-DISC1** | Ana Geliştirme Kartı (Discovery Board) |
+| **DS3231 RTC Modülü** | Hassas Gerçek Zamanlı Saat (I2C) |
+| **USB-Mini Kablo** | Kartı programlamak için |
+| **Jumper Kablolar** | Bağlantılar için (Erkek-Erkek, Dişi-Erkek) |
+
+---
+
+## � Proje Yapısı
+
+Depo, kolay erişim için konulara göre ayrılmış klasörlerden oluşmaktadır:
+
+```text
+stm_learning/
+├── 01-GPIO_Blinky/              # Temel LED yakıp söndürme
+├── 02-External_Interrupts/      # Buton ile kesme kontrolü
+├── 03-ADC_Voltage_Calculation/  # ADC ile sıcaklık ve voltaj okuma
+├── 04-Timer_PWM/                # PWM sinyali ile LED parlaklık kontrolü
+├── 05-UART_Communication/       # Bilgisayar ile seri haberleşme
+├── 06-I2C_DS3231_RTC/           # I2C protokolü ile RTC modül kullanımı
+├── 07-SPI_LIS3DSH_Accelerometer/# SPI ile dahili ivmeölçer okuma
+└── 08-DMA_Memory_Management/    # DMA ile yüksek hızlı veri transferi
+```
+
+---
+
+## 📚 Kaynaklar ve Dokümantasyon
+
+Geliştirme sürecinde kullanılan resmi dokümanlar:
+
+| Doküman | Açıklama | Bağlantı |
+| :--- | :--- | :---: |
+| **Reference Manual** | Donanım kayıtları (Registers) ve çevre birimleri detayları | [PDF İndir](https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bt-mcus-stmcroelectroncs.pdf) |
+| **Datasheet** | Pin yapısı, elektriksel özellikler ve hafıza haritası | [PDF İndir](https://www.st.com/resource/en/datasheet/dm00037051.pdf) |
+| **Schematic** | Kartın devre şeması ve bağlantı yolları | [PDF İndir](https://www.st.com/resource/en/schematc_pack/mb997-f407vgt6-b02_schematc.pdf) |
+
+---
 
 ## 🤝 Katkıda Bulunma
 
-Her türlü katkıya açığız! Hata düzeltmeleri, yeni proje örnekleri veya dökümantasyon iyileştirmeleri için lütfen [CONTRIBUTING.md](CONTRIBUTING.md) dosyasını inceleyin.
+Bu proje açık kaynaklıdır ve gelişime açıktır. Katkıda bulunmak isterseniz:
 
-## 📄 Lisans
+1.  Projeyi **Fork** edin.
+2.  Yeni bir **Branch** oluşturun (`feature/yeni-ozellik`).
+3.  Değişikliklerinizi **Commit** edin.
+4.  Dalınızı **Push** edin.
+5.  Bir **Pull Request** açın.
 
-Bu proje MIT Lisansı ile lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
+Detaylı rehber için [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına göz atabilirsiniz.
 
 ---
+
 <div align="center">
-<sub>Gömülü Sistemler Tutkusuyla Hazırlanmıştır ❤️ Bahattin Yunus </sub>
+
+*Bu repo, gömülü sistemler tutkunları için hazırlanmıştır.*  
+⭐ **Projeyi beğendiyseniz yıldız vermeyi unutmayın!**
+
 </div>
